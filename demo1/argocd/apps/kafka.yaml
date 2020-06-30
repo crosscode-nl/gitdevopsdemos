@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kafka
+  namespace: argocd
+spec:
+  destination:
+    namespace: kafka
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: demo1/kafka/
+    repoURL: https://github.com/crosscode-nl/gitdevopsdemos
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
