@@ -4,7 +4,7 @@ kubectl create ns argocd
 echo Applyin argocd/boot.yaml
 kubectl apply -f argocd/boot.yaml -n argocd
 echo Waiting for argocd-server or timeout of 5 minutes
-kubectl wait deployments/argocd-server --for=condition=Ready --timeout=300s -n argocd
+kubectl wait deployments/argocd-server --for=condition=Available --timeout=300s -n argocd
 echo Applying argocd/projects
 kubectl apply -f argocd/projects -n argocd
 echo Applying argocd/apps
