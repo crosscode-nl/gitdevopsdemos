@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kafka
+  name: strimzi
   namespace: argocd
 spec:
   destination:
@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: kafka
   source:
-    path: demo1/kafka/
+    path: demo1/strimzi/
     repoURL: https://github.com/crosscode-nl/gitdevopsdemos
     targetRevision: HEAD
   syncPolicy:
