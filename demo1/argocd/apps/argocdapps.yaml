@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocdapps
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: argocd
+  source:
+    path: demo1/argocd/apps
+    repoURL: https://github.com/crosscode-nl/gitdevopsdemos
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
