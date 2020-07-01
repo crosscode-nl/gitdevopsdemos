@@ -9,7 +9,8 @@ spec:
   accessModes:
     - ReadWriteOnce
   storageClassName: local
-  selector:
-    matchLabels:
-      name: "node4"
+  nodeAffinity:
+    selector:
+      matchLabels:
+        name: "node4"
 
