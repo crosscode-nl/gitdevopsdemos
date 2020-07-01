@@ -3,28 +3,35 @@ gitops/devops/devsecops demo repo
 
 ## Demo1
 
-### Argo CD
+### Installation
 
 Argo CD installs application into a Kubernetes based on repository resources. It will monitor differences and provides a nice UI to manage the applications. 
 
-1. Install Argo CD
+This demo tries to show how quickly you can spin-up a cluster once it is defined in git.
 
-kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+Requirementes: 
 
-2. Access Argo CD
+New kubernetes cluster (VMWare/Cloud/What you want)
 
-Forward port:
+Working kubectl with full admin rights. 
+
+Run:
 
 ``` 
-kubectl port-forward svc/argocd-server -n argocd 8080:443
+boot.sh
 ``` 
 
-Access UI at: ```https://localhost:8080``` 
+This will do some initial bootstrapping and bring up your cluster. 
 
-Login with admin and password from ```kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2``` 
+Installing or updating applications your cluster from now on is managed by Argo CD.
 
-3. Create project kafka
+See Argo CD documentation for how this works, but in short: 
+
+Argo CD will use repositories as a source of truth. It will detect changes and can either manually or automatically.
+
+You install applicatons by defining an application resource. This demo uses the app in an app pattern. That means that in order to create an app you can add aan resource in demo1/argocd/apps
+
+***If you fork this repo you need to update all repoURL's in all applications under demo1/argocd/apps before running boot.sh***
 
 
 
