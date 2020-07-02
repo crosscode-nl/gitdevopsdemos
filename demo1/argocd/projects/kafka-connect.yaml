@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: kafka
+  name: kafka-connect
   namespace: argocd
 spec:
   clusterResourceWhitelist:
