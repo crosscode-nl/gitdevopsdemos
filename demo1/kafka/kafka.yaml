@@ -24,7 +24,7 @@ spec:
   zookeeper:
     replicas: 3
     storage:
-      type: jbod
+      type: persistent-claim
       volumes:
       - type: persistent-claim
         size: 5Gi
