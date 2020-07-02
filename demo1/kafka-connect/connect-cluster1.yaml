@@ -4,3 +4,4 @@ metadata:
   name: connect-cluster-1
 spec:
   replicas: 3
+  bootstrapServers: my-cluster-kafka-bootstrap.kafka
