@@ -5,7 +5,7 @@ metadata:
 spec:
   kafka:
     version: 2.5.0
-    replicas: 1
+    replicas: 3
     listeners:
       plain: {}
       tls: {}
@@ -22,14 +22,11 @@ spec:
         deleteClaim: false
         id: 0
   zookeeper:
-    replicas: 1
+    replicas: 3
     storage:
       type: persistent-claim
-      volumes:
-      - type: persistent-claim
-        size: 5Gi
-        deleteClaim: false
-        id: 0
+      size: 5Gi
+      deleteClaim: false
   entityOperator:
     topicOperator: {}
     userOperator: {}
