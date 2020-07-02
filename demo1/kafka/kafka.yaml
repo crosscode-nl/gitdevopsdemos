@@ -22,7 +22,7 @@ spec:
         deleteClaim: false
         id: 0
   zookeeper:
-    replicas: 3
+    replicas: 1
     storage:
       type: persistent-claim
       volumes:
