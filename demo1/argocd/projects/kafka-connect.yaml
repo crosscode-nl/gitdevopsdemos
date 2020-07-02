@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: kafka
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: kafka-connect
+    server: https://kubernetes.default.svc
+  orphanedResources:
+    warn: true
+  sourceRepos:
+  - '*'

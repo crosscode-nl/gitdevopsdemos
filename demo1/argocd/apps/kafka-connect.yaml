@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: kafka-connect
     server: https://kubernetes.default.svc
-  project: kafka
+  project: kafka-connect
   source:
     path: demo1/kafka-connect/
     repoURL: https://github.com/crosscode-nl/gitdevopsdemos
