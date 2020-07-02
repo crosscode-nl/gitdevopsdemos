@@ -4,13 +4,20 @@ metadata:
   name: node4pv
 spec:
   capacity:
-    storage: 8Gi
+    storage: 5Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   storageClassName: local
+  persistentVolumeReclaimPolicy: Retain
+  local:
+    path: /var/lib/volumeclaim
   nodeAffinity:
-    nodeSelectorTerms:
-      matchLabels:
-        name: "node4"
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - node4
 

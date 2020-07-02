@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: node9pv
+  name: ${NODENAME}pv
 spec:
   capacity:
     storage: 5Gi
@@ -19,5 +19,5 @@ spec:
         - key: kubernetes.io/hostname
           operator: In
           values:
-          - node9
+          - ${NODENAME}
 
