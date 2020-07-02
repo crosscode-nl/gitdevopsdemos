@@ -13,5 +13,11 @@ spec:
     chart: minio
     helm:
       parameters:
+      - name: persistence.size
+        value: 5Gi
+      - name: accessKey.password
+        value: uT8EoWUM9s4kPO/mXlayUA==
+      - name: secretKey.password
+        value: my3kCrUNcAvU6vlwnYJx6UrYEzloCFth7sD7DARi
   project: 'minio'
 
