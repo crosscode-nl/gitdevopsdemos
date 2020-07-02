@@ -19,5 +19,7 @@ spec:
         value: uT8EoWUM9s4kPO/mXlayUA==
       - name: secretKey.password
         value: my3kCrUNcAvU6vlwnYJx6UrYEzloCFth7sD7DARi
+      - name: global.storageClass
+        value: local
   project: 'minio'
 
