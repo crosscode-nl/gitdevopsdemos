@@ -4,7 +4,7 @@ metadata:
   name: connect-cluster-1
 spec:
   replicas: 3
-  bootstrapServers: my-cluster-kafka-bootstrap.kafka:9092
+  bootstrapServers: my-cluster-kafka-bootstrap:9092
   config:
     group.id: connect-cluster-1
     offset.storage.topic: connect-cluster-1-offsets
