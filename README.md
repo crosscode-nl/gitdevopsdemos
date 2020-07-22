@@ -5,11 +5,11 @@ gitops/devops/devsecops demo repo
 
 ### Installation
 
-Argo CD installs application into a Kubernetes based on repository resources. It will monitor differences and provides a nice UI to manage the applications. 
+Argo CD installs applications into a Kubernetes based on repository resources. It will monitor differences and provides a nice UI to manage the applications. 
 
 This demo tries to show how quickly you can spin-up a cluster once it is defined in git.
 
-Requirementes: 
+Requirements: 
 
 New kubernetes cluster (VMWare/Cloud/What you want)
 
