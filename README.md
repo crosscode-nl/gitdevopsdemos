@@ -33,7 +33,7 @@ Installing or updating applications your cluster from now on is managed by Argo 
 
 See Argo CD documentation for how this works, but in short: 
 
-Argo CD will use repositories as a source of truth. It will detect changes and can either manually or automatically.
+Argo CD will use repositories as a source of truth. It will detect changes and can apply them either manually or automatically.
 
 You install applicatons by defining project and application resources in the repository, because this demo uses the app in app pattern.
 
